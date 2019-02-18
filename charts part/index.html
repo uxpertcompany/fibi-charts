@@ -189,7 +189,7 @@
 				<p class="last_update yellow_line">עדכון אחרון: <span> 08.03.2018 9:05</span></p>
 				<a href="#" class="link_there">לפעולות בחשבון מט’’ח</a>
 			</div>
-		</div>	
+		</div>
 	</section>
 	<section class="financial_services">
 		<div class="inside_width">
@@ -322,8 +322,10 @@ $('.nav_link').click(function(event) {
 	var activeAnchorIndex =+ activeAnchor[activeAnchor.length - 1];
 	if (activeAnchorIndex >= $('.nav_link').length) {
 		$('.nav_rotate_link[data-dir=increase]').css('color', '#eee');
+		$('.nav_rotate_link[data-dir=decrease]').css('color', '#000');
 	} else if (activeAnchorIndex < 2) {
 		$('.nav_rotate_link[data-dir=decrease]').css('color', '#eee');
+		$('.nav_rotate_link[data-dir=increase]').css('color', '#000');
 	} else {
 		$('.nav_rotate_link').css('color', '#000');
 	}
