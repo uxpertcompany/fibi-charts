@@ -1,0 +1,220 @@
+/*.full-width-header .main-nav li:first-child a {
+	background-color: transparent;
+}
+.full-width-header .main-nav li:first-child a:hover {
+    background-color: #cea533;
+}*/
+section.inner_header.contact_inner_header {
+	padding-bottom: 1rem;
+}
+section.main {
+	font-size: 1.3rem;
+	display: flex;
+	padding-bottom: 0 !important;
+}
+section.main > .addresses {
+	width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+address {
+	display: flex;
+	justify-content: space-between;
+	max-width: 500px;
+    width: 100%;
+}
+address > .nav_map h2 {
+    margin: 0;
+    max-width: 120px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+}
+address > .main {
+	border-right: 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+address > .main > span,
+address > .main > .more_info > div {
+    padding: .5rem 0;
+    padding-right: 3rem;
+    position: relative;
+    margin-right: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+address > .main > span:before {
+    content: url(../../images/platinum-inner-pages/location-contact.svg);
+	position: absolute;
+	right: 0;    
+	top: 9px;
+}
+address > .nav_map > a {
+	color: #a6893c;
+    text-decoration: underline;
+    max-width: 119px;
+    width: 100%;
+    font-weight: 700;
+}
+address > .main > .more_info > .open_hours {
+	display: flex;
+	align-items: center;
+	padding-bottom: 0;
+}
+address > .main > .more_info > .open_hours > div {
+	display: flex;
+}
+address > .main > .more_info > div img {
+	padding-left: 2rem;
+}
+address > .main > .more_info a {
+	color: inherit;
+}
+address > .main > .more_info > .contact_phone:before {
+	content: url(../../images/platinum-inner-pages/phone-contact.svg);
+	position: absolute;
+	right: 0;
+}
+address > .main > .more_info > .contact_fax:before {
+	content: url(../../images/platinum-inner-pages/fax-contact.svg);
+	position: absolute;
+	right: -3px;
+	top: 0.75rem;
+}
+address > .main > .more_info > .open_hours:before {
+	content: url(../../images/platinum-inner-pages/hours-contact.svg);
+	position: absolute;
+	right: 0;
+	top: 0.75rem;
+}
+#map {
+	width: 50%;
+	height: 1000px;
+}
+
+/*tablet/mobile responsive by pass source code*/
+
+@media screen and (max-width: 1024px) {
+
+	.show {
+    	transition: max-height 1s ease;
+    	max-height: 200px !important;
+	}
+	.hide_contact_mob {
+		width: 10%;
+	}
+	.hide_contact_mob > i {
+	    border: solid rgba(93, 113, 145, 1);
+	    border-width: 0 2px 2px 0;
+	    display: inline-block;
+	    padding: 5px;
+	    transform: rotate(45deg);
+	    transition: all .5s ease;
+	}
+	.arrow_rotate {
+	    transform: rotate(225deg) !important;
+	}
+	section.main {
+		flex-direction: column-reverse;
+	}
+	section.main > .addresses {
+		width: 90%;
+		margin: auto;
+	} 
+	.nav_map {
+		width: 10%;
+	}
+	.nav_map span {
+		display: none;
+	}
+	#map {
+		width: 100%;
+	}
+	address {
+    	align-items: baseline;
+	}
+	address > .header {
+		flex-direction: column;
+    	padding-right: 3rem;
+	}
+	address > .nav_map h2 {
+		display: none;
+	}
+	address > .header > span {
+		padding-right: 4rem;
+	}
+	address > .header > span:before {
+		top: -1rem;
+	}
+	address > .main {
+		border-right: 0;
+    	position: relative;
+    	padding-top: 1.5rem;
+    	width: 70%;
+	}
+	address > .main:before {
+		content: "תל אביב";
+		position: absolute;
+    	top: 0rem;
+    	right: 5rem;
+    	font-weight: 700;
+		}
+	address > .main > .more_info > .open_hours:before {
+		top: auto;
+	}
+	address > .main > span, 
+	 address > .main > .more_info > div {
+	 	align-items: center; 
+		max-width: 250px;
+    	justify-content: space-between;
+	}
+	address > .main > span {
+		padding-right: 3rem;
+	}
+	address > .main > span:before {
+		top: -5px;
+	}
+	address > .main > span > span.bold,
+	address > .main > .more_info > div > span.bold {
+		display: none;
+	}
+	address > .main > .more_info {
+		max-height: 0;
+		transition: max-height 1s ease;
+		overflow: hidden;
+	}
+	address > .main > .more_info > .open_hours {
+    	max-width: 225px;
+    	flex-wrap: wrap;
+    	justify-content: space-between;
+    	padding-top: 0;
+	}
+	address > .main > .more_info > .contact_fax:before {
+		top: 0.75rem;
+	}
+	address > .main > .more_info > .open_hours .space {
+		display: none;
+	}
+	address > .main > .more_info .hours {
+		justify-content: space-between;
+		max-width: 140px;
+    	width: 100%;
+	}
+}
+@media screen and (max-width: 400px) {
+	address > .main > .more_info > .open_hours {
+		max-width: 185px;
+	}
+	address > .main > .more_info .hours {
+		max-width: 120px;
+	}
+}
+@media screen and (max-width: 350px) {
+	address > .main > .more_info > .contact_phone .space {
+		display: none;
+	}
+}

@@ -1,0 +1,8 @@
+@media screen and (min-width: 769px) {
+.services{background-image: url("../images/2018/bg-1920x1330.jpg")}
+.promo-banner{background-image: url("../images/2018/parallax/parallax-1920X1200.jpg")}
+}
+@media screen and (max-width: 768px) {
+.services{background-image: url("../images/2018/bg-digital-375X700.jpg")}
+.promo-banner{background-image: url("../images/2018/parallax-375X450.jpg")}
+}

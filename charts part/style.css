@@ -1,0 +1,585 @@
+input[type="checkbox"] {
+	-webkit-appearance: checkbox;
+	opacity: 0;
+}
+.inside_width {
+	max-width: 65%;
+	margin: auto;
+}
+section h2 {
+    border-right: 3px solid rgba(233, 189, 46, 1);
+    line-height: 2rem;
+    padding-right: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+section.capital_market_view > h2 {
+	color: rgba(92, 96, 99, 1);
+}
+.capital_market_view > nav.nav_menu {
+    display: flex;
+    position: relative;
+    background-color: rgba(250, 250, 250, 1);
+}
+.capital_market_view > nav.nav_menu a {
+	font-size: 1.3rem;
+	color: rgba(160, 158, 158, 1);
+	letter-spacing: -0.02em;
+	width: 7rem;
+	margin-left: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.capital_market_view > nav.nav_menu a.nav_rotate_link {
+    position: absolute;
+    font-weight: 100;
+    color: #eee;
+    font-size: 50px;
+    top: 220px;
+}
+.capital_market_view > nav.nav_menu a#nav_rotate_link_right {
+    right: -40px;
+}
+.capital_market_view > nav.nav_menu a#nav_rotate_link_left {
+    left: -150px;
+}
+.capital_market_view > nav.nav_menu a.chosen_chart {
+	color: rgba(2, 63, 135, 1);
+	border-bottom: 2px solid rgba(2, 63, 135, 1);
+    font-weight: 700;
+    text-align: center;
+}
+.nav_menu_section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+.nav_menu_section > .charts_side {
+    background: red;
+    width: 70%;
+    height: 355px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    text-align: center;
+}
+.control_chart_side > .main_chart {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 24rem;
+}
+.control_chart_side > .main_chart > .square_chart {
+    width: 44%;
+    height: 10rem;
+    position: relative;
+    margin: 0.5rem;
+    margin-top: 0;
+    margin-right: 0;
+    padding: .5rem .5rem .5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.control_chart_side > .main_chart > .square_chart > label.check_container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border: 1px solid rgba(223, 223, 223, 1);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.control_chart_side > .main_chart > .square_chart > label.check_container:hover {
+	border: 1px solid rgba(12, 51, 117, 1);
+}
+.checked {
+    box-shadow: 2px 9px 21px 0px rgba(0, 0, 0, 0.2);
+}
+.control_chart_side > .main_chart > .square_chart > .check_container > span {
+    position: absolute;
+    top: .5rem;
+    right: 0.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 1px solid rgba(212, 207, 205, 1);
+}
+.checkmark:after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 0.7rem;
+    height: 0.4rem;
+    background: rgba(0, 0, 0, 0);
+    top: 0.3rem;
+    right: 0.2rem;
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-50deg);
+}
+.check_container input:checked ~ .checkmark {
+	background-color: rgba(24, 167, 157, 1);
+    border: none;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: solid rgba(255, 255, 255, 0); 
+}
+.square_chart.grey_chart > .check_container > input:checked ~ .checkmark {
+	background-color: rgba(158, 158, 158, 1);
+}
+.square_chart.blue_light_chart > .check_container > input:checked ~ .checkmark {
+	background-color: rgba(43, 163, 255, 1);	
+}
+.square_chart.dark_blue_chart > .check_container > input:checked ~ .checkmark {
+	background-color: rgba(12, 51, 117, 1);
+}
+.square_chart.yellow_chart > .check_container > input:checked ~ .checkmark {
+	background-color: rgba(255, 193, 11, 1);
+}
+.check_container input:checked ~ .checkmark:after {
+	display: block;
+}
+.square_chart p.name_burse {
+    margin: 1.5rem 0 0;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgba(2, 63, 135, 1);
+    width: 50%;
+    line-height: 1.6rem;
+}
+.square_chart > .middle_square_chart > span {
+	font-size: 1.33rem;
+	line-height: 1.33rem;
+	color: rgba(101, 101, 101, 1);
+}
+.persent {
+    position: relative;
+    font-size: 1.65rem;
+    line-height: normal;
+    margin: 0;
+   	margin-left: 1.1rem;
+}
+.persent.up_green {
+    color: rgba(40, 159, 7, 1);
+}
+.persent.up_green:after {
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgba(0, 0, 0, 0);
+    top: 0.8rem;
+    right: 4rem;
+    border: 2px solid rgba(40, 159, 7, 1);
+    border-top: none;
+    border-right: none;
+    transform: rotate(133deg);
+}
+.persent.down_red {
+	color: rgba(255, 51, 51, 1);
+}
+.persent.down_red:after {
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgba(0, 0, 0, 0);
+    top: 0.4rem;
+    right: 4rem;
+    border: 2px solid rgba(255, 51, 51, 1);
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+.shares_cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.shares_cont > .shares {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(250, 250, 250, 1);
+    padding: 7rem 3rem 6rem 5rem;
+}
+.shares_cont > .last_update {
+    padding-top: 2rem;
+}
+.shares_cont > .shares h5 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: rgba(84, 84, 84, 1);
+}
+.shares_cont > .shares span {
+    font-size: 1.2rem;
+    color: rgba(101, 101, 101, 1);
+}
+.financial_services {
+	background-image: url(img/bg.png);
+	padding: 2rem 0 6.5rem;
+}
+.financial_services > .inside_width h2 {
+	color: #fff;
+}
+.financial_services > .inside_width > .finance_links {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+
+.financial_services > .inside_width > .finance_links > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 4 - 45px / 2);
+    height: 15rem;
+}
+.financial_services > .inside_width > .finance_links > a.finance_link {
+	background-color: rgba(255, 255, 255, .7);
+    border: 2px solid rgba(255, 255, 255, .0);
+    outline: 6px solid rgba(255, 255, 255, .7);
+    color: rgba(19, 63, 149, 1);
+}
+.financial_services > .inside_width > .finance_links > a.finance_link:hover {
+	border: 2px solid rgba(255, 193, 14, 1);
+    background-color: rgba(255, 255, 255, 1);
+    outline: 6px solid rgba(255, 255, 255, 1);
+    font-weight: 700;
+}
+/*.financial_services > .inside_width > .finance_links > a.finance_link:hover  {}*/
+.financial_services > .inside_width > .finance_links > a.home_link {
+	-webkit-box-shadow: 0px 0px 40px 0px rgba(255,255,255,1);
+	-moz-box-shadow: 0px 0px 40px 0px rgba(255,255,255,1);
+	box-shadow: 0px 0px 40px 0px rgba(255,255,255,1);
+	background-color: transparent;
+	border: 5px solid rgba(255, 255, 255, 0);
+	outline: 2px solid rgba(255, 255, 255, 1);
+    height: 15.5rem;
+}
+.financial_services > .inside_width > .finance_links > a > figure {
+	text-align: center;
+    margin: 0;
+}
+.financial_services > .inside_width > .finance_links > a > figure > figcaption {
+    font-size: 2rem;
+    max-width: 200px;
+    line-height: 1.7rem;
+    padding-top: 2rem;
+}
+.financial_services > .inside_width > .finance_links > a.home_link figcaption {
+	font-size: 1.6rem;
+    color: #fff;
+    font-style: italic;
+    font-weight: 700;
+    font-family: sans-serif;
+    text-shadow: 0px 0px 2rem rgba(255, 255, 255, 1);
+}
+section.foreign_currency {
+	display: flex;
+	flex-direction: column;
+    padding-top: 3rem;
+}
+section > h3 {
+	font-size: 2.16rem;
+	color: rgba(92, 96, 99, 1);
+    padding-bottom: 1rem;
+}
+section > .currencies  {
+	display: flex;
+	justify-content: space-between;
+}
+section > .currencies > .currency {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3rem;
+    margin: 0 1rem 2rem;
+    position: relative;
+}
+section > .currencies > .currency > h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    height: 3.3rem;
+    width: 100%;
+    background-color: rgba(250, 250, 250, 1);
+}
+section > .currencies > .currency > .current_img {
+    margin: 2rem 0;
+	width: 80px;
+    height: 80px;
+    border: 2px solid rgba(255, 193, 14, 1);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section > .currencies > .currency > .currentRate {
+	display: flex;
+    justify-content: space-between;
+    width: 50%;
+	font-size: 1.5rem;
+    color: rgba(101, 101, 101, 1);
+}
+section > .currencies > .currency > .currentRate .float_currency {
+	font-size: 2rem;
+	font-weight: bold;
+	color: rgba(84, 84, 84, 1);
+}
+section > .currencies > .currency > .currentRate p {
+	margin-bottom: 0;
+}
+.last_update {
+	font-size: 1.25rem;
+	color: rgba(110, 110, 110, 1);
+}
+.last_update.yellow_line {
+    border-bottom: 3px solid rgba(255, 193, 14, 1)
+}
+.link_there {
+    align-self: flex-end;
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: relative;
+    color: rgba(2, 63, 135, 1);
+    padding-left: 1.5rem;
+}
+.link_there:after {
+    content: '<';
+    position: absolute;
+    font-size: 2rem;
+    top: -0.6rem;
+    font-weight: 400;
+    transform: rotate(180deg);
+    left: 0rem;
+}
+.currency_borders:after {   
+    content: "";
+    width: 1px;
+    height: 65%;
+    background-color: rgba(215, 215, 215, 1);
+    position: absolute;
+    top: 20%;
+    right: -1rem;
+}
+.currency_borders:before {
+    content: "";
+    width: 1px;
+    height: 65%;
+    background-color: rgba(215, 215, 215, 1);
+    position: absolute;
+    top: 20%;
+    left: -1rem;
+}
+@media screen and (max-width: 1300px) {
+    .inside_width {
+        max-width: 80%;
+    }
+    section > .currencies > .currency > .currentRate {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 990px) {
+	.inside_width {
+        max-width: 90%;
+    }
+    .nav_menu_section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .control_chart_side > .main_chart {
+        max-width: 95%;
+        margin: 0 auto;
+        margin-right: -.5rem;
+    }
+    .control_chart_side > .main_chart > .square_chart {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+    }
+    .square_chart > .middle_square_chart > span {
+        font-size: 1.5rem;
+    }
+    .control_chart_side > .main_chart > .square_chart > label.check_container {
+        justify-content: space-between;
+        border: none;
+    }
+    .control_chart_side > .main_chart > .square_chart > label.check_container:hover {
+        border: none;
+    }
+    .control_chart_side > .main_chart > .square_chart > .check_container > span {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+    .checkmark:after {
+        width: 1.7rem;
+        height: 0.8rem;
+    }
+    .control_chart_side > .main_chart > .square_chart > .middle_square_chart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+    }
+    .control_chart_side > .main_chart > .square_chart > .middle_square_chart > .name_burse {
+        width: 100%;
+        margin: 0;
+        margin-right: 3rem;
+    }
+    .control_chart_side > .last_update {
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .nav_menu_section > .charts_side {
+        width: 100%;
+    }
+    .square_chart p.name_burse {
+        font-size: font-size: 1.9rem;
+    }
+    .shares_cont > .shares {
+        background-color: inherit;
+        padding: 2rem 3rem 5rem 5rem;
+    }
+    .shares_cont > .shares > .share {
+        width: 25%;
+        margin-right: 15%;
+        padding-top: 3rem;
+    }
+    .shares_cont > .shares h5 {
+        font-size: 2rem;
+    }
+    .shares_cont > .shares span {
+        font-size: 1.5rem;
+    }
+    .persent {
+        font-size: 2rem;
+        margin-left: 1.1rem;
+    }
+    .persent.up_green:after {
+        right: 5rem;
+        width: 1rem;
+        height: 1rem;
+    }
+    .persent.down_red:after {
+        right: 5rem;
+        width: 1rem;
+        height: 1rem;
+    }
+    .checked {
+        box-shadow: unset;
+    }
+    .financial_services > .inside_width > .finance_links {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .financial_services > .inside_width > .finance_links > a {
+        width: 45%;
+        height: 16rem;
+        margin: 1.1rem 0;
+    }
+    .financial_services > .inside_width > .finance_links > a.home_link {
+        height: 16.6rem;
+        width: 45.7%;
+    }
+    section > .currencies {
+        display: flex;
+        justify-content: space-between;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: overlay;
+        overflow-y: hidden;
+        padding-bottom: 1rem;
+    }
+    section > .currencies > .currency {
+        box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.1);
+        padding-bottom: 3rem;
+    }
+    section > .currencies > .currency_borders:before {
+        content: none;
+    }
+    section > .currencies > .currency_borders:after {
+        content: none;
+    }
+    section > .currencies > .currency > h4 {
+        width: 20rem;
+    }
+    .capital_market_view > nav.nav_menu {
+        overflow-x: auto;
+        width: 115%;
+        transform: translateX(5%);
+    }
+    .capital_market_view > nav.nav_menu a {
+        width: 100%;
+        font-size: 2.1rem;
+        padding: 0rem 2rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 10px;
+    }
+    .financial_services > .inside_width > .finance_links {
+        width: 92%;
+        margin: auto;
+    }
+    .financial_services > .inside_width > .finance_links > a {
+        width: 40%;
+        height: 11.5rem;
+        margin: 1.3rem 0;
+    }
+    .financial_services > .inside_width > .finance_links > a.home_link {
+        height: 12.3rem;
+        width: 42%;
+    }
+    .financial_services > .inside_width > .finance_links > a > figure img {
+        max-height: 55px;
+    }
+    .financial_services > .inside_width > .finance_links > a > figure > figcaption {
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        max-width: 99%;
+        margin: auto;
+
+    }
+    .persent.up_green:after {
+        right: 4.8rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        top: 0.9rem;
+    }
+    .persent.down_red:after {
+        right: 4.8rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        top: 0.5rem;
+    }
+    .link_there {
+        font-size: 1.6rem;
+    }
+    .link_there:after {
+        font-size: 3rem;
+        top: -1.2rem;
+    }
+}
+
+
+a img.hover {
+  display: none;  
+}
+a:hover img.hover {
+  display: block;  
+  margin: auto;
+}
+a:hover img.unhover {
+  display: none;  
+}
