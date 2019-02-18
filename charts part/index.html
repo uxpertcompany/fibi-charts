@@ -320,15 +320,15 @@ $('.nav_link').click(function(event) {
 
 	var activeAnchor = $('.chosen_chart').attr('data-anchor');
 	var activeAnchorIndex =+ activeAnchor[activeAnchor.length - 1];
-	if (activeAnchorIndex >= $('.nav_link').length) {
-		$('.nav_rotate_link[data-dir=increase]').css('color', '#eee');
-		$('.nav_rotate_link[data-dir=decrease]').css('color', '#000');
-	} else if (activeAnchorIndex < 2) {
-		$('.nav_rotate_link[data-dir=decrease]').css('color', '#eee');
-		$('.nav_rotate_link[data-dir=increase]').css('color', '#000');
-	} else {
-		$('.nav_rotate_link').css('color', '#000');
-	}
+    if (activeAnchorIndex >= $('.nav_link').length) {
+        $('.nav_rotate_link[data-dir=increase]').css('color', '#eee');
+        $('.nav_rotate_link[data-dir=decrease]').css('color', 'rgba(2, 63, 135, 1)');
+    } else if (activeAnchorIndex < 2) {
+        $('.nav_rotate_link[data-dir=decrease]').css('color', '#eee');
+        $('.nav_rotate_link[data-dir=increase]').css('color', 'rgba(2, 63, 135, 1)');
+    } else {
+        $('.nav_rotate_link').css('color', 'rgba(2, 63, 135, 1)');
+    }
 });
 
 	</script>
